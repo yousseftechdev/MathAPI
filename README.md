@@ -24,6 +24,10 @@ MathAPI is a simple Flask-based API that provides various mathematical functions
     - `pi` (π)
     - `e` (Euler's number)
     - `golden_ratio`
+    - `silver_ratio`
+    - `planck`
+    - `avogadro`
+    - `speed_of_light`
 
 ### Unit Conversion
 - **`GET /convert?v=num&from=unit1&to=unit2`**

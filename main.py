@@ -54,7 +54,11 @@ def constants():
     return jsonify({
         'pi': pi,
         'e': e,
-        'golden_ratio': (1 + 5 ** 0.5) / 2
+        'golden_ratio': (1 + 5 ** 0.5) / 2,
+        'silver_ratio': 1 + 2 ** 0.5,
+        'planck_constant': 6.62607015e-34,
+        'avogadro_number': 6.02214076e23,
+        'speed_of_light': 299792458  # in meters per second
     })
 
 @app.route("/convert")
