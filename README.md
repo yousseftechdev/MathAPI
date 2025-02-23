@@ -16,6 +16,28 @@ MathAPI is a simple Flask-based API that provides various mathematical functions
     - `sqrt`, `log`, `log10`
     - `factorial`, `ceil`, `floor`
   - Example: `/math/sin?v=30`
+  
+- **`GET /math/radians/<function>?v=number`**
+  - Computes trigonometric functions with input in radians.
+  - Supported functions:
+    - `sin`, `cos`, `tan`
+  - Example: `/math/radians/sin?v=0.5235987756`
+
+- **`GET /math/exp?base=number&exponent=number`**
+  - Computes exponentiation.
+  - Example: `/math/exp?base=2&exponent=3`
+
+- **`GET /math/mod?num1=number&num2=number`**
+  - Computes modulus.
+  - Example: `/math/mod?num1=10&num2=3`
+
+- **`GET /math/is_prime?n=number`**
+  - Checks if a number is prime.
+  - Example: `/math/is_prime?n=7`
+
+- **`GET /math/fibonacci?n=number`**
+  - Generates Fibonacci sequence up to n numbers.
+  - Example: `/math/fibonacci?n=10`
 
 ### Constants
 - **`GET /constants`**
@@ -25,16 +47,35 @@ MathAPI is a simple Flask-based API that provides various mathematical functions
     - `e` (Euler's number)
     - `golden_ratio`
     - `silver_ratio`
-    - `planck`
-    - `avogadro`
+    - `planck_constant`
+    - `avogadro_number`
     - `speed_of_light`
+    - `gravitational_constant`
+    - `boltzmann_constant`
+    - `gas_constant`
+    - `elementary_charge`
 
 ### Unit Conversion
-- **`GET /convert?v=num&from=unit1&to=unit2`**
+- **`POST /convert`**
   - Converts between units.
   - Currently supports:
     - Celsius ↔ Fahrenheit
-  - Example: `/convert?v=100&from=c&to=f`
+    - Celsius ↔ Kelvin
+    - Meters ↔ Kilometers
+    - Meters ↔ Centimeters
+    - Inches ↔ Centimeters
+    - Feet ↔ Meters
+    - Yards ↔ Meters
+    - Miles ↔ Kilometers
+    - Kilograms ↔ Pounds
+  - Example:
+    ```json
+    {
+      "v": 100,
+      "from": "c",
+      "to": "f"
+    }
+    ```
 
 ### Basic Arithmetic Operations
 - **`POST /calculate`**
