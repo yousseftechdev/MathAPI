@@ -1,5 +1,7 @@
 # MathAPI
 
+![mathapi](https://github.com/user-attachments/assets/877339fd-7ce7-4b61-81aa-34bb5a91f2a9)
+
 MathAPI is a simple Flask-based API that provides various mathematical functions, constants, unit conversions, and basic arithmetic operations.
 
 ## Endpoints
